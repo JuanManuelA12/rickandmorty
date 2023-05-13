@@ -1,6 +1,22 @@
 import { createStore } from "redux";
-import reducer from "./Reducer";
+import rootReducer from './reducer';
 
-const store = createStore(reducer);
+const store = createStore(
+    rootReducer,
+);
+
 
 export default store;
+
+
+
+
+
+
+// // import {createStore} from 'redux';
+// import {createStore} from 'react-redux'
+// import rootReducer from './Reducer'
+
+//  const store = createStore(rootReducer);
+ 
+//  export default store;

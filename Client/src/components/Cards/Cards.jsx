@@ -4,16 +4,16 @@ import Card from '../Card/Card';
 
 export default function Cards(props) {
    const { characters, onClose } = props;
-   return <div>
-      {characters.map(char =>
+
+   return (
+   <div>
+      {characters?.map(character =>
       <Card
-         id={char.id}
-         key={char.id}        
-         name={char.name}
-         species={char.species}
-         gender={char.gender}
-         image={char.image}
-         onClose={() => onClose(char.id)}
+         id={character.id}
+         key={character.id}   
+         character={character}     
+         onClose={() => onClose(character.id)}
         />)}
-   </div>;
+   </div>
+   )
 }
